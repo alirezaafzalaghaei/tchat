@@ -1,0 +1,79 @@
+services:
+  messenger-app:
+    restart: always
+    build:
+      context: ./messenger
+    volumes:
+      - ./messenger:/app
+    container_name: messenger_backend
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=messengeruser
+      - MYSQL_PASSWORD=123
+      - MYSQL_DATABASE=messengerdb
+    depends_on:
+      - mysql
+      - redis
+    
+    networks:
+      - app-network
+
+  nginx:
+    build:
+      context: ./nginx
+    container_name: nginx_proxy
+    ports:
+      - "10443:443"
+    depends_on:
+      - messenger-app
+    networks:
+      - app-network
+
+  notification-app:
+    build:
+      context: ./notification
+    volumes:
+      - ./notification:/app
+    container_name: notification_manager
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - redis
+      - messenger-app
+    networks:
+      - app-network
+
+  redis:
+    image: redis:7.2.4
+    ports:
+      - "6379:6379"
+    networks:
+      - app-network
+    volumes:
+      - redis_data:/data
+  
+  mysql:
+    image: mysql:8.4.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: messengerdb
+      MYSQL_USER: messengeruser
+      MYSQL_PASSWORD: 123
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mysql_data:
+  redis_data:
