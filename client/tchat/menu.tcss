@@ -1,0 +1,184 @@
+Screen {
+    overflow: auto;
+    height: 100vh;
+}
+
+#register_form, #login_form {
+    layout: grid;
+    grid-size: 2 3;
+    height: 40vh;
+    grid-gutter: 0 1;
+    margin-top: 2;
+}
+
+#register_form Button, #login_form Button {
+    width: 100%;
+    margin: 0 1;
+    padding: 0 1;
+    background: $primary-lighten-2;
+    content-align: center middle;
+    text-align: center;
+}
+
+#dialog {
+    align: center middle;
+    layout: grid;
+    grid-size: 2 2;
+    padding: 0 1;
+    width: 100%;
+    height: 11;
+    /*border: thick $background 80%;*/
+    content-align: center middle;
+}
+
+#question {
+    column-span: 2;
+    height: 1fr;
+    width: 1fr;
+    content-align: center middle;
+}
+
+#dialog .btn {
+    width: 95%;
+    margin-left: 2;
+    align: center middle;
+    content-align: center middle;
+}
+
+RichLog {
+    width: 100%;
+    padding: 1 2;
+}
+
+#public-container {
+    width: 100%;
+    height: 90vh;
+}
+
+#public-container RichLog {
+    height: 100%;
+}
+
+#private-container {
+    width: 100%;
+    height: 100vh;
+    layout: grid;
+    grid-size: 8 8;
+}
+
+#private-container #back {
+    column-span: 1;
+    row-span: 1;
+}
+
+#private-container #pvtitle {
+    column-span: 7;
+    row-span: 1;
+}
+
+#private-container #private {
+    column-span: 8;
+    row-span: 7;
+    height: 100%;
+}
+
+#private-container #input-send {
+    column-span: 8;
+    row-span: 1;
+}
+
+TabbedContent {
+    height: 100%;
+    padding: 0;
+}
+
+#private-tab #input-send {
+    dock: top;
+}
+
+#back {
+    width: 100vw;
+    background: $accent;
+    padding: 0;
+    margin-left: 1;
+}
+
+#pvtitle {
+    width: 100vw;
+    text-align: center;
+    content-align: center middle;
+    border: double $accent;
+    margin: 0;
+}
+
+#input-send {
+    padding-top: 1;
+    padding-right: 2;
+    layout: grid;
+    grid-size: 8 1;
+    height: 20vh;
+    dock: bottom;
+}
+
+#input-send Input {
+    width: 100vw;
+    column-span: 7;
+    margin-left: 0;
+}
+
+#input-send Button {
+    width: 100vw;
+    background: $accent;
+}
+
+Button {
+    text-align: center;
+    content-align: center middle;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    box-sizing: content-box;
+}
+
+#alert {
+    width: 50vw;
+    height: 50vh;
+    offset: 50% 50%;
+    border: panel $accent;
+    background: $surface 50%;
+}
+
+#alert #title {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+}
+
+#alert #text {
+    padding: 2;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+}
+
+#alert Button {
+    dock: bottom;
+    align-horizontal: center;
+    margin-bottom: 1;
+}
+
+#logo {
+    offset: 40% 50%;
+}
+
+#alert .error {
+    background: red;
+}
+
+#alert .warning {
+    background: yellow;
+}
+
+#alert .information {
+    background: green;
+}
