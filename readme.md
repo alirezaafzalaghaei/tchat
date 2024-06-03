@@ -74,6 +74,35 @@ This application is intended solely for educational purposes and **should not** 
         $ tchat --session user-guest.json
         ```
 
+## Screenshots
+
+<table>
+  <tr>
+    <td>
+      <img src="screenshots/splash.jpg" alt="Splash Screen" width="45%"/>
+    </td>
+    <td>
+      <img src="screenshots/alert.jpg" alt="Alert Screen" width="45%"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="screenshots/public-chats.jpg" alt="Public Chats" width="45%"/>
+    </td>
+    <td>
+      <img src="screenshots/private-chat.jpg" alt="Private Chat" width="45%"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="screenshots/me.jpg" alt="Me" width="45%"/>
+    </td>
+    <td>
+      <img src="screenshots/search-users.jpg" alt="Search Users" width="45%"/>
+    </td>
+  </tr>
+</table>
+
 ## Further Exploration
 
 Detailed documentation and details about each application and its implementation are provided in the Read Me files located in each directory and subdirectory.
