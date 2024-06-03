@@ -79,26 +79,26 @@ This application is intended solely for educational purposes and **should not** 
 <table>
   <tr>
     <td>
-      <img src="screenshots/splash.jpg" alt="Splash Screen" width="45%"/>
+      <img src="screenshots/splash.jpg" alt="Splash Screen" width="98%"/>
     </td>
     <td>
-      <img src="screenshots/alert.jpg" alt="Alert Screen" width="45%"/>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="screenshots/public-chats.jpg" alt="Public Chats" width="45%"/>
-    </td>
-    <td>
-      <img src="screenshots/private-chat.jpg" alt="Private Chat" width="45%"/>
+      <img src="screenshots/alert.jpg" alt="Alert Screen" width="98%"/>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="screenshots/me.jpg" alt="Me" width="45%"/>
+      <img src="screenshots/public-chats.jpg" alt="Public Chats" width="98%"/>
     </td>
     <td>
-      <img src="screenshots/search-users.jpg" alt="Search Users" width="45%"/>
+      <img src="screenshots/private-chat.jpg" alt="Private Chat" width="98%"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="screenshots/me.jpg" alt="Me" width="98%"/>
+    </td>
+    <td>
+      <img src="screenshots/search-users.jpg" alt="Search Users" width="98%"/>
     </td>
   </tr>
 </table>
